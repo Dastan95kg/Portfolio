@@ -1,0 +1,125 @@
+.readme {
+    margin-top: 225px;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 60px;
+
+        h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: $gray;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -1rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 33.33333%;
+        padding: 0 15px;
+        margin-bottom: 20px;
+
+        .image {
+            position: relative;
+            width: 368px;
+            height: 256px;
+            margin-bottom: 20px;
+
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .black-box {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                width: 75px;
+                height: 75px;
+                top: 0;
+                left: 0;
+                background-color: $black;
+
+                .date {
+                    color: $white;
+                    text-align: center;
+
+                    font-size: 1.06rem;
+                    font-weight: 700;
+                    line-height: 1.4;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: $black;
+            margin-bottom: 8px;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .subtitle {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: $black;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .text {
+            font-size: 0.8rem;
+            font-weight: 300;
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        .btn--sm {
+            padding: 15px 20px;
+            max-width: 130px;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: flex-end;
+        color: $gray;
+        font-size: 0.94rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 120px;
+
+        transition: color 0.2s linear,
+        font-weight 0.2s linear;
+
+        &:hover {
+            color: $black;
+            font-weight: 700;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.user {
+    display: flex;
+    
+    &__avatar {
+        width: 57px;
+        height: 57px;
+        img {
+            border-radius: 50%;
+        }
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        .name {
+            font-weight: 700;
+            font-size: 1.06rem;
+            line-height: 1.2;
+            margin-bottom: 3px;
+        }
+        .prof {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: rgba(#2B2A2C, 0.7);
+        }
+    }
+}
+

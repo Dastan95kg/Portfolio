@@ -1,0 +1,50 @@
+.nav {
+    display: flex;
+    align-items: center;
+
+    &__link {
+        margin-left: 30px;
+        position: relative;
+
+        font-size: 0.93rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: $black;
+        text-transform: uppercase;
+
+        &:after {
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            z-index: 1;
+
+            content: "";
+            width: 0;
+            height: 2px;
+            background-color: $black;
+            
+            transition: width 0.2s linear;
+        }
+
+        &:hover:not(.nav__link--btn) {
+            
+            &:after {
+                width: 100%;
+            }
+        }
+        
+        // Modificator
+        &--btn {
+            padding: 0.66rem 1.5rem;
+            border: 2px solid $black;
+            border-radius: 20px;
+
+            transition: background-color 0.2s linear, color 0.2s linear;
+
+            &:hover {
+                background-color: $black;
+                color: $white;
+            }
+        }
+    }
+}
