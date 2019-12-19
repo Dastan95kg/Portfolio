@@ -1,9 +1,25 @@
 .nav {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 
     @media #{$mobile} {
         display: none;
+        background-color: #fff;
+        text-align: center;
+        height: auto;
+        padding: 1rem;
+                
+        &.show {
+            width: 100%;
+            display: flex;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            z-index: 1000;
+
+            box-shadow: 0 5px 10px rgba(0,0,0,.3);
+        }
     }
 
     &__link {
@@ -15,6 +31,12 @@
         text-decoration: none;
         color: $black;
         text-transform: uppercase;
+
+        @media #{$mobile} {
+            width: 100%;
+            margin-left: 0;
+            padding: 0.5rem 1rem;
+        }
 
         &:after {
             position: absolute;
@@ -34,6 +56,10 @@
             
             &:after {
                 width: 100%;
+
+                @media #{$mobile} {
+                    width: 0;
+                }
             }
         }
         

@@ -19,6 +19,12 @@
         @media #{$mobile} {
             background-size: 300px auto;
         }
+
+        @media #{$mobile-sm} {
+            background: none;
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__content {
@@ -26,16 +32,16 @@
         padding-top: 80px;
         padding-bottom: 120px;
 
-        @media #{$mobile-xs} {
-            padding: 0 0 50px;
-        }
-
         @media #{$mobile-sm} {
             width: 100%;
         }
 
+        @media #{$mobile-xs} {
+            padding: 0 0 50px;
+        }
+
         @media #{$mobile} {
-            width: 60%;
+            padding-top: 8rem;
         }
 
         &-hello {
@@ -68,6 +74,10 @@
         &-social {
             display: flex;
             margin-bottom: 40px;
+
+            @media #{$mobile-sm} {
+                justify-content: center;
+            }
             
             .icon {
                 transition: transform 0.2s linear;

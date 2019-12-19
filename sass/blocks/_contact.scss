@@ -2,9 +2,30 @@
     display: flex;
     background: url(https://placehold.it/477x700) right center no-repeat;
 
+    @media #{$mobile} {
+        background-size: 400px 700px;
+    }
+
+    @media #{$mobile-sm} {
+        background-position: top right;
+        background-size: 200px 200px;
+    }
+
+    @media #{$mobile-xs} {
+        background-position: top center;
+    }
+
     &__left {
         width: 47%;
         padding: 2rem;
+
+        @media #{$mobile-sm} {
+            width: 100%;
+        }
+
+        @media #{$mobile-xs} {
+            padding-top: 220px;
+        }
     }
 
     &__info {

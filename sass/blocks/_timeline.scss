@@ -5,6 +5,10 @@
     max-width: 768px;
     position: relative;
 
+    @media #{$mobile-xs} {
+        flex-direction: column;
+    } 
+
     &:before {
         content: '';
         display: block;
@@ -15,18 +19,37 @@
         left: 50%;
         background-color: $black;
         z-index: 1;
+
+        @media #{$mobile-xs} {
+            display: none;
+        } 
     }
 
     &__col {
         width: 50%;
 
+        @media #{$mobile-xs} {
+            width: 100%;
+        }
+
         &--left {
             text-align: right;
             padding-right: 3.2rem;
+
+            @media #{$mobile-xs} {
+                text-align: center;
+                padding-right: 0;
+                margin-bottom: 60px;
+            }
         }
 
         &--right {
             padding-left: 3.2rem;
+
+            @media #{$mobile-xs} {
+                text-align: center;
+                padding-left: 0;
+            }
         }
     }
 
@@ -36,6 +59,10 @@
         color: $black;
         text-transform: uppercase;
         font-weight: 700;
+
+        @media #{$mobile-xs} {
+            margin-bottom: 10px;
+        }
     }
 
     &__item {

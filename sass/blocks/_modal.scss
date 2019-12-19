@@ -52,6 +52,12 @@
 
     &__content {
         padding: 5rem 1rem;
+
+        @media #{$mobile-xs} {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
     }
 
     &__title {
@@ -60,6 +66,10 @@
         text-transform: uppercase;
         color: $black;
         font-weight: 700;
+
+        @media #{$mobile-xs} {
+            text-align: center;
+        }
     }
 
     &__subtitle {
@@ -67,5 +77,9 @@
         font-size: 1.06rem;
         color: $black;
         font-weight: 400;
+
+        @media #{$mobile-xs} {
+            text-align: center;
+        }
     }
 }
