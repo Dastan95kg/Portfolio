@@ -2,10 +2,23 @@
     
     &__inner {
         display: flex;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
         position: relative;
         border-bottom: 1px solid rgba($gray, 0.3);
         background: url("../img/intro/intro-photo.png") right bottom no-repeat;
         overflow: hidden;
+
+        @media #{$tablet} {
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+
+            background-size: 450px auto;
+        }
+
+        @media #{$mobile} {
+            background-size: 300px auto;
+        }
     }
 
     &__content {
@@ -13,10 +26,26 @@
         padding-top: 80px;
         padding-bottom: 120px;
 
+        @media #{$mobile-xs} {
+            padding: 0 0 50px;
+        }
+
+        @media #{$mobile-sm} {
+            width: 100%;
+        }
+
+        @media #{$mobile} {
+            width: 60%;
+        }
+
         &-hello {
             font-size: 2.13rem;
             color: $black;
             font-weight: 200;
+
+            @media #{$mobile} {
+                font-size: 1.5rem;
+            }
         }
 
         &-name {
@@ -24,6 +53,10 @@
             font-weight: 700;
             font-size: 3rem;
             color: $black;
+
+            @media #{$mobile} {
+                font-size: 2rem;
+            }
         }
 
         &-prof {
@@ -34,11 +67,15 @@
 
         &-social {
             display: flex;
+            margin-bottom: 40px;
             
             .icon {
-                margin-right: 10px;
-                margin-bottom: 40px;
                 transition: transform 0.2s linear;
+                margin-right: 10px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
 
                 &:hover {
                     transform: translateY(-5px);
@@ -58,5 +95,18 @@
         bottom: -25px;
         right: 0;
         z-index: 1;
+
+        @media #{$tablet} {
+            width: 350px;
+            bottom: 0;
+        }
+
+        @media #{$mobile} {
+            width: 275px;
+        }
+
+        @media #{$mobile-sm} {
+            display: none;
+        }
     }
 }

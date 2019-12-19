@@ -2,6 +2,10 @@
     display: flex;
     align-items: center;
 
+    @media #{$mobile} {
+        display: none;
+    }
+
     &__link {
         margin-left: 30px;
         position: relative;

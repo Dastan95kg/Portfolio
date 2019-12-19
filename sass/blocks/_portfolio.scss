@@ -7,6 +7,14 @@
     &__col {
         width: 33.33333%;
         padding: 1rem 1rem;
+
+        @media #{$mobile} {
+            width: 50%;
+        }
+
+        @media #{$mobile-sm} {
+            width: 100%;
+        }
     }
 
     .work {

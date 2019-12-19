@@ -1,24 +1,40 @@
 .about {
-    margin-top: 6rem;
-    margin-bottom: 9.33rem;
+    padding-top: 6rem;
+    padding-bottom: 9.33rem;
+
+    @media #{$tablet} {
+        padding-top: 0;
+    }
+
+    @media #{$mobile} {
+        padding-bottom: 4rem;
+    }
 
     &__inner {
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__photo {
         width: 50%;
         position: relative;
 
-        img {
-            position: relative;
+        @media #{$mobile} {
+            display: none;
+        }
+
+        .img {
+            position: absolute;
+            max-height: 600px;
+            bottom: 0;
             z-index: 2;
         }
 
         &:before {
             position: absolute;
             content: '';
-            width: 413px;
+            width: 100%;
+            max-width: 413px;
             height: 413px;
             z-index: 1;
             left: 2.2rem;
@@ -31,8 +47,15 @@
         display: flex;
         flex-direction: column;
         width: 50%;
-        margin-top: 3rem;
+        margin-top: 2rem;
         padding-left: 3.2rem;
+
+        @media #{$mobile} {
+            width: 100%;
+            padding-left: 0;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
 
         .title {
             font-size: 3rem;
@@ -40,6 +63,14 @@
             color: $black;
             text-transform: uppercase;
             margin-bottom: 10px;
+
+            @media #{$notebook} {
+                font-size: 2.5rem;
+            }
+
+            @media #{$mobile} {
+                font-size: 2rem;
+            }
         }
 
         .bigtitle {
@@ -49,6 +80,14 @@
             color: rgba($black, 0.15);
             text-transform: uppercase;
             margin-bottom: 1.4rem;
+
+            @media #{$notebook} {
+                font-size: 4rem;
+            }
+
+            @media #{$mobile} {
+                font-size: 3rem;
+            }
         }
 
         .text {
